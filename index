@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Roteiro de Análise Sensorial - Bromatologia UFBA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e2e8f0;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.4;
+            padding: 40px 20px;
+        }
+
+        /* documento centralizado, estilo página A4 */
+        .document {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 50px 45px 70px 45px;
+            border-radius: 4px;
+        }
+
+        /* Tipografia e cores base */
+        h1 {
+            font-size: 22pt;
+            font-weight: bold;
+            color: #1F4E79;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            border-bottom: 4px solid #2E75B6;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #2E75B6;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #1F6B3A;
+            margin-top: 20px;
+            margin-bottom: 6px;
+        }
+
+        .center-title {
+            text-align: center;
+        }
+
+        .cover-sub {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .para, p {
+            font-size: 11pt;
+            margin: 8px 0;
+            line-height: 1.5;
+            color: #1e2a3a;
+        }
+
+        /* listas personalizadas */
+        ul.bullet-list, .bullet-list {
+            list-style-type: none;
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+        ul.bullet-list li, .bullet-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 6px;
+            font-size: 11pt;
+            line-height: 1.45;
+        }
+        ul.bullet-list li::before, .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: #1F4E79;
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        ol.numbered-list {
+            margin-left: 30px;
+            margin-bottom: 12px;
+        }
+        ol.numbered-list li {
+            margin-bottom: 6px;
+            font-size: 11pt;
+            line-height: 1.45;
+        }
+
+        .list-item-bold {
+            font-weight: 700;
+            color: #1F4E79;
+        }
+
+        /* Caixas informativas */
+        .info-box {
+            background-color: #D6E4F0;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 6px solid #2E75B6;
+        }
+        .info-box-laranja {
+            background-color: #FCE4D6;
+            border-left-color: #C55A11;
+        }
+        .info-box-verde {
+            background-color: #D9EAD3;
+            border-left-color: #1F6B3A;
+        }
+        .info-box-amarelo {
+            background-color: #FFF2CC;
+            border-left-color: #bf9b30;
+        }
+
+        /* Tabelas gerais */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            font-size: 10.5pt;
+        }
+        th, td {
+            border: 1px solid #aaaaaa;
+            padding: 10px 12px;
+            vertical-align: top;
+        }
+        th {
+            background-color: #1F4E79;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .table-header-light th {
+            background-color: #2E75B6;
+        }
+        .center-cell {
+            text-align: center;
+        }
+        .bg-cinza-claro {
+            background-color: #F2F2F2;
+        }
+        .bg-verde-claro {
+            background-color: #D9EAD3;
+        }
+        .bg-laranja-claro {
+            background-color: #FCE4D6;
+        }
+        .bg-amarelo-claro {
+            background-color: #FFF2CC;
+        }
+        .bg-branco {
+            background-color: #ffffff;
+        }
+
+        /* grade especial para sala sensorial */
+        .two-col-grid {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .col-card {
+            flex: 1;
+            border: 1px solid #aaa;
+            padding: 12px 16px;
+            background-color: #fff;
+        }
+        .col-card h4 {
+            font-size: 13pt;
+            margin-bottom: 12px;
+        }
+        .col-card ul {
+            margin-left: 18px;
+        }
+
+        /* linha separadora */
+        .page-break {
+            margin: 50px 0 30px;
+            border-top: 2px dashed #2E75B6;
+            position: relative;
+        }
+        .page-break-text {
+            text-align: center;
+            font-size: 12pt;
+            font-weight: bold;
+            background: white;
+            display: inline-block;
+            padding: 0 12px;
+            position: relative;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #1F4E79;
+        }
+
+        /* underline campos */
+        .underline-field {
+            letter-spacing: 2px;
+            border-bottom: 1px dashed #333;
+            min-width: 120px;
+            display: inline-block;
+        }
+        .dotted-placeholder {
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        /* rodapé */
+        .footer-thanks {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #2E75B6;
+            font-weight: bold;
+            color: #1F6B3A;
+        }
+
+        @media (max-width: 700px) {
+            .document {
+                padding: 25px 20px;
+            }
+            .two-col-grid {
+                flex-direction: column;
+            }
+            table, .table-responsive {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="document">
+
+    <!-- ================= CAPA ================= -->
+    <div style="text-align: center; margin-bottom: 30px;">
+        <p style="font-size: 12pt; color: #1F4E79; font-weight: bold; margin-bottom: 6px;">UNIVERSIDADE FEDERAL DA BAHIA</p>
+        <p style="font-size: 11pt; color: #1F4E79;">Faculdade de Farmácia – Bromatologia</p>
+        <div style="height: 30px;"></div>
+        <p style="font-size: 28pt; font-weight: bold; color: #1F4E79; margin: 40px 0 15px;">📋 ROTEIRO DE ATIVIDADE PRÁTICA</p>
+        <p style="font-size: 18pt; font-weight: bold; color: #2E75B6;">Análise Sensorial com Escala Hedônica</p>
+        <p style="font-size: 13pt; font-style: italic; color: #555555; margin: 12px 0 35px;">Alimento Original vs. Versão Modificada</p>
+    </div>
+
+    <!-- INFOBOX capa -->
+    <div class="info-box" style="background-color: #D6E4F0;">
+        <p style="margin-bottom: 8px;"><strong>🕐 Início da aula:</strong> 7h30 para todos os alunos</p>
+        <p style="margin-bottom: 8px;"><strong>🍳 Quem vai preparar o alimento na hora:</strong> chegar entre 7h e 7h30</p>
+        <p style="margin-bottom: 8px;"><strong>👥 Grupos:</strong> até 6 grupos com no máximo 10 alunos cada</p>
+        <p><strong>🧪 Amostras mínimas:</strong> 6 porções por amostra (A e B) para os provadores</p>
+    </div>
+
+    <!-- ================= 1. O QUE É ANÁLISE SENSORIAL ================= -->
+    <h1>1. O QUE É ANÁLISE SENSORIAL?</h1>
+    <p>A análise sensorial é uma ciência que usa os sentidos humanos — visão, olfato, paladar, tato e audição — para avaliar as características de um alimento. Em Bromatologia, ela nos ajuda a entender como as pessoas percebem a qualidade dos alimentos e como mudanças na composição (ingredientes, processamento, temperatura etc.) afetam essa percepção.</p>
+    <p>Nesta atividade, cada grupo irá preparar duas versões de um alimento:</p>
+    <ul class="bullet-list">
+        <li>Amostra A – versão original (receita padrão)</li>
+        <li>Amostra B – versão modificada (com alguma alteração escolhida pelo grupo, como substituição de ingrediente, mudança de temperatura, adição/redução de sal, açúcar etc.)</li>
+    </ul>
+    <p><em>Os próprios alunos da turma atuarão como provadores, avaliando as duas amostras usando uma escala hedônica estruturada de 9 pontos.</em></p>
+
+    <!-- ================= 2. ORGANIZAÇÃO DOS GRUPOS ================= -->
+    <h1>2. ORGANIZAÇÃO DOS GRUPOS</h1>
+    <h2>2.1 Estrutura Geral</h2>
+    <p>A turma será dividida em até 6 grupos. Cada grupo deve ter no máximo 10 alunos. Cada grupo é responsável por:</p>
+    <ol class="numbered-list">
+        <li>Preparar o alimento original (Amostra A) e a versão modificada (Amostra B).</li>
+        <li>Preparar ao menos 6 porções de cada amostra para os provadores.</li>
+        <li>Definir internamente quais alunos do grupo atuarão como provadores.</li>
+        <li>Elaborar e distribuir as fichas de avaliação aos provadores.</li>
+        <li>Organizar a entrada dos provadores na sala de análise sensorial.</li>
+        <li>Recolher e registrar os dados após a avaliação.</li>
+    </ol>
+
+    <h2>2.2 Definição dos Provadores</h2>
+    <div class="info-box info-box-laranja">
+        <p><strong>⚠️ IMPORTANTE: Quem é provador?</strong></p>
+        <p>Cada grupo deve definir, entre seus próprios membros ou entre alunos de outros grupos, quem servirá como provador. O número mínimo de provadores por grupo é 6 (um para cada amostra servida). Recomenda-se que o coordenador de cada grupo anote o nome dos provadores antes da aula começar.</p>
+        <p><em>Dica: alunos que prepararam as amostras também podem ser provadores de amostras de outros grupos.</em></p>
+    </div>
+
+    <!-- ================= 3. A SALA DE ANÁLISE SENSORIAL ================= -->
+    <h1>3. A SALA DE ANÁLISE SENSORIAL</h1>
+    <p>A sala de análise sensorial é um espaço controlado para garantir que os provadores não sofram influências externas durante a avaliação. Siga estas regras:</p>
+    
+    <div class="two-col-grid">
+        <div class="col-card" style="background-color: #D9EAD3;">
+            <h4 style="color:#1F6B3A;">✅ DENTRO DA SALA</h4>
+            <ul style="margin-left: 18px;">
+                <li>Apenas 3 provadores por vez</li>
+                <li>Silêncio absoluto</li>
+                <li>Sem comentários sobre as amostras</li>
+                <li>Água à disposição para enxágue bucal entre amostras</li>
+                <li>Avaliar uma amostra por vez, na sequência indicada na ficha</li>
+            </ul>
+        </div>
+        <div class="col-card" style="background-color: #FCE4D6;">
+            <h4 style="color:#C55A11;">❌ PROIBIDO NA SALA</h4>
+            <ul>
+                <li>Usar perfume ou desodorante com fragrância forte</li>
+                <li>Conversar ou dar opiniões antes de preencher a ficha</li>
+                <li>Fumar ou comer 30 min antes da avaliação</li>
+                <li>Uso de celular durante a prova</li>
+                <li>Entrar com alimentos ou bebidas não relacionados à atividade</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>3.1 Sistema de Sinalização (Luz Indicadora)</h2>
+    <div class="info-box">
+        <p><strong>💡 Como funciona a luz da sala?</strong></p>
+        <p>A sala possui um interruptor que controla uma luz de sinalização. O funcionamento é simples:</p>
+        <ul class="bullet-list">
+            <li><strong>Luz APAGADA:</strong> a avaliação ainda está em andamento. Aguarde do lado de fora.</li>
+            <li><strong>Luz ACESA:</strong> os provadores terminaram. Podem entrar os próximos.</li>
+        </ul>
+        <p><em>Ao término da avaliação, o último provador acende a luz antes de sair. O coordenador do grupo apaga a luz ao receber as fichas e preparar o próximo grupo.</em></p>
+    </div>
+
+    <!-- ================= 4. PASSO A PASSO PARA COORDENADOR ================= -->
+    <h1>4. PASSO A PASSO PARA O COORDENADOR DO GRUPO</h1>
+    <p>O coordenador é o aluno responsável por organizar a atividade dentro do grupo. Siga este roteiro:</p>
+
+    <h3>🕖 ANTES DA AULA (7h às 7h30) – Quem vai preparar na hora</h3>
+    <ol class="numbered-list">
+        <li><strong>Chegada:</strong> Chegue entre 7h e 7h30 com todos os ingredientes e utensílios necessários.</li>
+        <li><strong>Preparo:</strong> Prepare a Amostra A (original) e a Amostra B (modificada) em quantidade suficiente para pelo menos 6 porções de cada.</li>
+        <li><strong>Rotulagem cega:</strong> Identifique os recipientes com etiquetas: apenas "A" e "B" (não revele as diferenças aos provadores!).</li>
+        <li><strong>Conservação:</strong> Mantenha as amostras em condições adequadas (temperatura, higiene) até o momento da degustação.</li>
+    </ol>
+
+    <h3>🕣 NO INÍCIO DA AULA (7h30)</h3>
+    <ol class="numbered-list">
+        <li><strong>Liste os provadores:</strong> Confirme a lista dos 6 provadores do seu grupo.</li>
+        <li><strong>Distribua as fichas:</strong> Distribua uma ficha de avaliação para cada provador (veja o modelo na última página deste documento).</li>
+        <li><strong>Explique a escala:</strong> Explique rapidamente aos provadores como funciona a escala hedônica (1 = desgostei muitíssimo; 9 = gostei muitíssimo).</li>
+        <li><strong>Informe as regras:</strong> Oriente os provadores sobre as regras da sala (silêncio, sem comentários, água para enxágue).</li>
+    </ol>
+
+    <h3>🔬 DURANTE A AVALIAÇÃO</h3>
+    <ol class="numbered-list">
+        <li><strong>Controle a entrada:</strong> Organize a fila: apenas 3 provadores entram na sala por vez.</li>
+        <li><strong>Sirva as amostras:</strong> Sirva as amostras na ordem: Amostra A → enxágue bucal com água → Amostra B.</li>
+        <li><strong>Preencha a ficha:</strong> Oriente os provadores para preencherem a ficha individualmente antes de saírem.</li>
+        <li><strong>Sinalize com a luz:</strong> O último provador de cada rodada acende a luz ao término. O coordenador apaga a luz, recolhe as fichas e encaminha os próximos 3.</li>
+        <li><strong>Repita:</strong> Repita o processo até todos os 6 (ou mais) provadores terem avaliado.</li>
+    </ol>
+
+    <h3>📊 APÓS A AVALIAÇÃO</h3>
+    <ol class="numbered-list">
+        <li><strong>Recolha as fichas:</strong> Recolha todas as fichas preenchidas.</li>
+        <li><strong>Calcule as médias:</strong> Some as notas de cada atributo por amostra e calcule a média (total ÷ número de provadores).</li>
+        <li><strong>Compare:</strong> Compare os resultados da Amostra A com a Amostra B.</li>
+        <li><strong>Apresente:</strong> Apresente os resultados brevemente para a turma (média por atributo, qual amostra teve maior aceitação).</li>
+    </ol>
+
+    <!-- ================= 5. DICAS PRÁTICAS ================= -->
+    <h1>5. DICAS PRÁTICAS IMPORTANTES</h1>
+    
+    <table style="margin-top: 10px;">
+        <tr style="background-color: #D9EAD3;"><td style="padding: 14px;">
+            <strong>🍽️ Sobre as porções</strong>
+            <ul class="bullet-list" style="margin-top: 8px;">
+                <li>As porções devem ser pequenas (1 colher de sopa ou equivalente) — suficientes para sentir o sabor, mas não em excesso.</li>
+                <li>Sirva sempre na mesma quantidade para os dois provadores recebendo amostras ao mesmo tempo.</li>
+                <li>Use copos, pratos ou colheres descartáveis e mantenha higiene rigorosa.</li>
+            </ul>
+        </td></tr>
+        <tr style="background-color: #FFF2CC;"><td style="padding: 14px;">
+            <strong>🔢 Sobre a codificação das amostras</strong>
+            <ul class="bullet-list" style="margin-top: 8px;">
+                <li>Use apenas as letras A e B nos recipientes. Não escreva 'original' ou 'modificada'.</li>
+                <li>O segredo das amostras só pode ser revelado APÓS o encerramento de todas as avaliações do grupo.</li>
+            </ul>
+        </td></tr>
+        <tr style="background-color: #FCE4D6;"><td style="padding: 14px;">
+            <strong>🩺 Atenção a restrições alimentares</strong>
+            <ul class="bullet-list" style="margin-top: 8px;">
+                <li>Antes da prova, informe os provadores quais ingredientes estão presentes nas amostras.</li>
+                <li>Nenhum provador é obrigado a consumir alimentos que causem alergia ou que conflitem com restrições religiosas, éticas ou de saúde.</li>
+            </ul>
+        </td></tr>
+    </table>
+
+    <!-- ================= 6. INTERPRETAÇÃO DOS RESULTADOS ================= -->
+    <h1>6. COMO INTERPRETAR OS RESULTADOS</h1>
+    <p>Após recolher as fichas, o coordenador calculará a média das notas para cada atributo e cada amostra. Use a tabela abaixo como referência:</p>
+    <table>
+        <thead>
+            <tr><th>Média</th><th>Interpretação</th><th>Zona de aceitação</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="center-cell"><strong>≥ 7,0</strong></td><td>Boa aceitação</td><td>✅ Aceito</td></tr>
+            <tr style="background:#F2F2F2;"><td class="center-cell"><strong>5,0 a 6,9</strong></td><td>Aceitação moderada</td><td>⚠️ Neutro/Intermediário</td></tr>
+            <tr><td class="center-cell"><strong>&lt; 5,0</strong></td><td>Baixa aceitação</td><td>❌ Rejeitado</td></tr>
+        </tbody>
+    </table>
+    <p><em>Lembre-se: o objetivo não é julgar quem fez 'melhor', mas entender como as modificações nos alimentos afetam a percepção sensorial dos consumidores. Isso é Bromatologia na prática!</em></p>
+    
+    <div class="footer-thanks" style="margin: 30px 0 20px;">Boa atividade a todos! 🔬🍽️</div>
+
+    <!-- ================ FICHA DE AVALIAÇÃO (PÁGINA SEPARADA) ================ -->
+    <div class="page-break" style="margin: 50px 0 20px;"></div>
+    <div style="text-align: center; margin-top: 20px;">
+        <p style="font-size: 11pt; color:#1F4E79;">UFBA – FACULDADE DE FARMÁCIA</p>
+        <p style="font-size: 11pt; color:#1F4E79;">Bromatologia – Atividade Prática de Análise Sensorial</p>
+        <h1 style="border-bottom: 4px double #2E75B6; display: inline-block; margin-top: 15px;">FICHA DE AVALIAÇÃO SENSORIAL – ESCALA HEDÔNICA</h1>
+    </div>
+
+    <!-- IDENTIFICAÇÃO -->
+    <table style="margin-top: 25px;">
+        <tr>
+            <td style="width:50%">Nome do provador: ___________________________________</td>
+            <td style="width:50%">Data: _____ / _____ / _________</td>
+        </tr>
+        <tr>
+            <td>Grupo avaliado: ____________________________________</td>
+            <td>Alimento avaliado: _________________________________</td>
+        </tr>
+    </table>
+
+    <!-- ESCALA HEDÔNICA DE REFERÊNCIA -->
+    <p style="font-weight: bold; margin: 20px 0 5px; color:#1F4E79;">ESCALA HEDÔNICA DE REFERÊNCIA</p>
+    <table>
+        <thead><tr><th>Nota</th><th>Descrição</th></tr></thead>
+        <tbody>
+            <!-- 9 a 1 com cores conforme regra -->
+            <tr><td class="center-cell" style="background-color:#D9EAD3; font-weight:bold;">9</td><td>Gostei muitíssimo</td></tr>
+            <tr><td class="center-cell" style="background-color:#D9EAD3; font-weight:bold;">8</td><td>Gostei muito</td></tr>
+            <tr><td class="center-cell" style="background-color:#D9EAD3; font-weight:bold;">7</td><td>Gostei moderadamente</td></tr>
+            <tr><td class="center-cell" style="background-color:#D9EAD3; font-weight:bold;">6</td><td>Gostei ligeiramente</td></tr>
+            <tr><td class="center-cell" style="background-color:#FFF2CC; font-weight:bold;">5</td><td>Nem gostei / Nem desgostei</td></tr>
+            <tr><td class="center-cell" style="background-color:#FCE4D6; font-weight:bold;">4</td><td>Desgostei ligeiramente</td></tr>
+            <tr><td class="center-cell" style="background-color:#FCE4D6; font-weight:bold;">3</td><td>Desgostei moderadamente</td></tr>
+            <tr><td class="center-cell" style="background-color:#FCE4D6; font-weight:bold;">2</td><td>Desgostei muito</td></tr>
+            <tr><td class="center-cell" style="background-color:#FCE4D6; font-weight:bold;">1</td><td>Desgostei muitíssimo</td></tr>
+        </tbody>
+    </table>
+
+    <!-- AVALIAÇÃO DAS AMOSTRAS -->
+    <p style="font-weight: bold; margin: 20px 0 5px; color:#1F4E79;">AVALIAÇÃO DAS AMOSTRAS</p>
+    <p><em>Utilize a escala acima para atribuir uma nota de 1 a 9 para cada atributo das amostras:</em></p>
+    <table>
+        <thead>
+            <tr><th>Atributo</th><th>Amostra A (Nota 1-9)</th><th>Amostra B (Nota 1-9)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Aparência</td><td class="center-cell">_________</td><td class="center-cell">_________</td></tr>
+            <tr style="background:#F2F2F2;"><td>Aroma</td><td class="center-cell">_________</td><td class="center-cell">_________</td></tr>
+            <tr><td>Sabor</td><td class="center-cell">_________</td><td class="center-cell">_________</td></tr>
+            <tr style="background:#F2F2F2;"><td>Textura</td><td class="center-cell">_________</td><td class="center-cell">_________</td></tr>
+            <tr><td>Impressão Global</td><td class="center-cell">_________</td><td class="center-cell">_________</td></tr>
+        </tbody>
+    </table>
+
+    <!-- COMENTÁRIOS E OBSERVAÇÕES -->
+    <p style="font-weight: bold; margin: 20px 0 5px; color:#1F4E79;">COMENTÁRIOS E OBSERVAÇÕES</p>
+    <table>
+        <tr><td style="padding: 12px;">
+            Amostra A: ___________________________________________________________________________________<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___________________________________________________________________________________<br><br>
+            Amostra B: ___________________________________________________________________________________<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___________________________________________________________________________________
+        </td></tr>
+    </table>
+
+    <!-- INTENÇÃO DE COMPRA -->
+    <p style="font-weight: bold; margin: 20px 0 5px; color:#1F4E79;">INTENÇÃO DE COMPRA (opcional)</p>
+    <table>
+        <tr>
+            <td style="width:50%; background:#F2F2F2; text-align:center;">Compraria a Amostra A?   ( ) Sim   ( ) Não   ( ) Talvez</td>
+            <td style="width:50%; background:#F2F2F2; text-align:center;">Compraria a Amostra B?   ( ) Sim   ( ) Não   ( ) Talvez</td>
+        </tr>
+    </table>
+    <div style="text-align: center; margin: 35px 0 10px;">
+        <p style="font-weight: bold; color:#1F6B3A; font-style: italic;">Obrigado pela sua participação! ✓</p>
+    </div>
+
+    <div style="margin-top: 35px; text-align: center; font-size: 9pt; color:#666; border-top: 1px solid #ccc; padding-top: 18px;">
+        Roteiro de Análise Sensorial – Bromatologia UFBA | Escala Hedônica 9 pontos
+    </div>
+</div>
+</body>
+</html>
+```
